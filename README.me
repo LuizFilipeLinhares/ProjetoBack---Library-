@@ -1,0 +1,27 @@
+# Library
+
+O library é um projeto para ajudar na questão de consultas e adição de livros em uma biblioteca 
+
+###Funções no Projeto: 
+
+    Cadastro de livros
+    Cadastro de listas
+    Leitura das listas existentes
+
+### Rotas
+
+/sobre: Temos as informações do estudante
+/{listName}: Retorna os dados de uma lista de livros
+
+/addBook: adiciona um livro
+
+```json
+    {
+        "nomeLivro": "The Da vinci Code",
+        "nomeLista": "LivrosFavoritos"
+    }
+```
+
+Para o projeto foi utilizada a linguagem JAVA, juntamente com o Framework do Sping e a dependencia do Sping Web para rodar o trabalho, alem do Docker para gerir os containers. 
+
+O projeto roda na Porta 8080 do localhost;
