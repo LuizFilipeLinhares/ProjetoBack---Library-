@@ -23,9 +23,9 @@ public class Controller {
 
     @GetMapping("/{listName}")
     public BookList listView(@PathVariable String listName){
-    return BService.listView(listName);}
+        return BService.listView(listName);}
 }
     @PostMapping("/Bookadd")
     public String bookAdd(@ResponseBody BookAdd bookAdd){
-    return BService.addBook(bookAdd.getBookName(), bookAdd.getListName());
-    }
+        return BService.addBook(bookAdd.getBookName(), bookAdd.getListName());
+}
