@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 @RestController
@@ -29,7 +30,7 @@ public class Controller {
     }
 
     @PostMapping("/addBook")
-    public ResponseEntity<String> addBook(@RequestBody BookAdd bookAdd) {
+    public ResponseEntity<String> addBook(@RequestBody BookAdd bookAdd)  throws IOException, InterruptedException {
         String result = bService.addBook(bookAdd.getBookName(), bookAdd.getListName());
         return ResponseEntity.ok(result);
     }
